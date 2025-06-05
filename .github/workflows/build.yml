@@ -12,11 +12,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Install Docker
-      run: |
-        sudo apt update
-        sudo apt install -y docker.io
-
     - name: Build with Buildozer Docker
       run: |
         docker run --rm -v ${{ github.workspace }}:/home/user/hostcwd \
